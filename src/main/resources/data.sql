@@ -1,0 +1,16 @@
+DROP TABLE IF EXISTS todo;
+CREATE TABLE todo (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  content VARCHAR(100) NOT NULL,
+  status TINYINT(1) NOT NULL
+);
+INSERT INTO todo (content,status) VALUES
+('CONTENT1',0);
+('CONTENT2',0);
+('CONTENT3',0);
+('CONTENT4',0);
+('CONTENT5',0);
+('CONTENT6',0);
+
+
+
