@@ -26,7 +26,7 @@ public class ToDoServiceImpl implements ToDoService {
 
     @Override
     public void deleteToDoById(Integer id) {
-
+        toDoRepository.deleteById(id);
     }
 
     @Override
