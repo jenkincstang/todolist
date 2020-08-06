@@ -33,4 +33,9 @@ public class ToDoController {
             return toDoService.saveToDo(toDo);
         return null;
     }
+
+    @PostMapping(value = "/todos")
+    public ToDo addToDoBy(@RequestBody ToDo toDo) {
+        return toDoService.saveToDo(toDo);
+    }
 }
