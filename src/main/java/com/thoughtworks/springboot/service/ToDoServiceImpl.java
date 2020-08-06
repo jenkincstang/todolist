@@ -4,6 +4,7 @@ import com.thoughtworks.springboot.entity.ToDo;
 import com.thoughtworks.springboot.repository.ToDoRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 public class ToDoServiceImpl implements ToDoService {
 
@@ -19,8 +20,8 @@ public class ToDoServiceImpl implements ToDoService {
     }
 
     @Override
-    public ToDo getToDoById(Integer id) {
-        return null;
+    public Optional<ToDo> getToDoById(Integer id) {
+        return toDoRepository.findById(id);
     }
 
     @Override
