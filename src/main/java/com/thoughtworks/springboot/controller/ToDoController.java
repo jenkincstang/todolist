@@ -38,4 +38,10 @@ public class ToDoController {
     public ToDo addToDoBy(@RequestBody ToDo toDo) {
         return toDoService.saveToDo(toDo);
     }
+
+    @DeleteMapping(value = "/todos/{id}")
+    public void deleteToDoById(@PathVariable("id")Integer id) {
+        if(toDoService.getToDoById(id).isPresent())
+            toDoService.deleteToDoById(id);
+    }
 }
