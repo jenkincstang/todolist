@@ -3,8 +3,7 @@ package com.thoughtworks.springboot.controller;
 import com.thoughtworks.springboot.entity.ToDo;
 import com.thoughtworks.springboot.service.ToDoService;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -26,5 +25,12 @@ public class ToDoController {
     @GetMapping(value = "/todos/{id}")
     public Optional<ToDo> findToDoById(@PathVariable("id")Integer id) {
         return toDoService.getToDoById(id);
+    }
+
+    @PutMapping(value = "/todos/{id}")
+    public ToDo updateToDoById(@PathVariable("id")Integer id, @RequestBody ToDo toDo) {
+        if(toDoService.getToDoById(id).isPresent())
+            return toDoService.saveToDo(toDo);
+        return null;
     }
 }
