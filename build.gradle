@@ -21,7 +21,6 @@ jacocoTestReport {
 
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-data-jpa'
-    compile "org.springframework.boot:spring-boot-starter-thymeleaf"
     compile 'com.h2database:h2'
     implementation 'org.springframework.boot:spring-boot-starter-web:2.3.1.RELEASE'
     testImplementation 'org.springframework.boot:spring-boot-starter-test:2.3.1.RELEASE'
@@ -32,7 +31,7 @@ dependencies {
 
 group = 'com.thoughtworks'
 version = '0.0.1-SNAPSHOT'
-description = 'spring-boot-employee'
+description = 'spring-boot'
 sourceCompatibility = '1.8'
 
 test {
